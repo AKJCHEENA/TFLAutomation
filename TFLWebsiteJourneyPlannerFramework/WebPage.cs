@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace TFLWebsiteJourneyPlannerFramework
 {
+    /// <summary>
+    /// Base class of any web page
+    /// </summary>
    public abstract class WebPage
     {
        protected WebPage(IWebDriver driver)

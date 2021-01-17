@@ -13,13 +13,15 @@ using System.Threading.Tasks;
 
 namespace TFLWebsiteJourneyPlannerFramework
 {
+    /// <summary>
+    /// To pick the driver from app config and opening the driver
+    /// </summary>
     public abstract class WebDrivers
     {
         public virtual IWebDriver GetWebDriverFromAppConfig() {
 
             string driver = ConfigurationManager.AppSettings.Get("WebDriver");
             string path = AppDomain.CurrentDomain.BaseDirectory;
-            string startupPath = Environment.CurrentDirectory;
             switch (driver)
             {
                 case "ChromeDriver":

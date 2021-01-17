@@ -1,9 +1,5 @@
 ﻿using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TFLWebsiteJourneyPlannerFramework;
 
 namespace TFLWebsiteJourneyPlannerDomain
@@ -27,21 +23,31 @@ namespace TFLWebsiteJourneyPlannerDomain
         {
 
         }
-
+        /// <summary>
+        /// To get the message from "from" field
+        /// </summary>
+        /// <returns></returns>
         public string GetFromMessagePlanAJourney()
         {
             var listOfWebElements =WaitAndFindingWebElementsMethods.WaitAndFindWhenElementsIsDisplayed(Driver, _fromMessagePlanAJourney);
 
              return listOfWebElements[0].Text.Trim(); 
         }
-
+        /// <summary>
+        /// To get the message from "To" field
+        /// </summary>
+        /// <returns></returns>
         public string GetToMessagePlanAJourney()
         {
             var listOfWebElements =WaitAndFindingWebElementsMethods.WaitAndFindWhenElementsIsDisplayed(Driver, _fromMessagePlanAJourney);
 
              return listOfWebElements[1].Text.Trim();
         }
-
+        /// <summary>
+        /// To enter the value in "from" field
+        /// </summary>
+        /// <param name="editedFomTextInPlanAJourney"></param>
+        /// <returns></returns>
         public JourneyDetailsPage EnterEditedFromFieldInPlanAJourney(string editedFomTextInPlanAJourney)
         {
             int i = 0;
@@ -57,6 +63,11 @@ namespace TFLWebsiteJourneyPlannerDomain
             }
             return this;
         }
+        /// <summary>
+        /// To enter the value in "To" field
+        /// </summary>
+        /// <param name="editedToTextInPlanAJourney"></param>
+        /// <returns></returns>
 
         public JourneyDetailsPage EnterEditedToFieldInPlanAJourney(string editedToTextInPlanAJourney)
         {
@@ -71,7 +82,10 @@ namespace TFLWebsiteJourneyPlannerDomain
             }
             return this;
         }
-
+        /// <summary>
+        /// To click on update journey details
+        /// </summary>
+        /// <returns></returns>
         public JourneyDetailsPage ClickOnUpdateJourneyWhenJourneyDetailsAreCorrect()
         {
             WaitAndFindingWebElementsMethods.WaitAndFindWhenElementIsClickable(Driver, _updateMyJourney).Click();
@@ -79,32 +93,45 @@ namespace TFLWebsiteJourneyPlannerDomain
             WaitAndFindingWebElementsMethods.ScrollUp(Driver);
             return this;
         }
-
+        /// <summary>
+        /// To click on home button
+        /// </summary>
+        /// <returns></returns>
         public TFLHtmlPage ClickOnHomeButtonWhenJourneyDetailsAreCorrect()
         {
             WaitAndFindingWebElementsMethods.WaitAndFindWhenElementIsClickable(Driver, _homeButtonMyJourney).Click();
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
             return new TFLHtmlPage(Driver);
         }
-
+        /// <summary>
+        /// to check edit journey link is enabled or not ?
+        /// </summary>
+        /// <returns></returns>
 
         public bool EditJourneyLinkEnabledInPlanAJourney()
         {
 
             return WaitAndFindingWebElementsMethods.WaitAndFindWhenElementIsClickable(Driver, _editJourneyLinkPlanAJourney).Enabled;
         }
-
+        /// <summary>
+        /// to check edit preference link is enabled or not ?
+        /// </summary>
+        /// <returns></returns>
         public bool EditPreferencesLinkEnabledInPlanAJourney()
         {
             WaitAndFindingWebElementsMethods.ScrollUp(Driver);
             return WaitAndFindingWebElementsMethods.WaitAndFindWhenElementIsClickable(Driver, _editPreferenceLinkPlanAJourney).Enabled;
         }
-
+        /// <summary>
+        /// To get the text from html page
+        /// </summary>
         public string GetQuickestTimeTextPlanAJourney
         {
             get { return WaitAndFindingWebElementsMethods.WaitAndFindWhenElementIsDisplayed(Driver, _quickestTimeTextPlanAJourney).Text.Trim(); }
         }
-
+        /// <summary>
+        /// To get the error text from html page
+        /// </summary>
         public string GetJourneyPlannerErrorTextPlanAJourney
         {
             get { return WaitAndFindingWebElementsMethods.WaitAndFindWhenElementIsDisplayed(Driver, _journeyPlannerErrorTextPlanAJourney).Text.Trim(); }

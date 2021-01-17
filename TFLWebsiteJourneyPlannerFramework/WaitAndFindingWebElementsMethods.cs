@@ -12,7 +12,12 @@ namespace TFLWebsiteJourneyPlannerFramework
    public static class WaitAndFindingWebElementsMethods
     {
 
-        
+        /// <summary>
+        /// To wait and find an element till element is clickable
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <param name="locator"></param>
+        /// <returns></returns>
         public static IWebElement WaitAndFindWhenElementIsClickable(IWebDriver driver, By locator)
         { 
             
@@ -20,7 +25,12 @@ namespace TFLWebsiteJourneyPlannerFramework
                 webdriverwait.Until(ExpectedConditions.ElementToBeClickable(driver.FindElement(locator)));
                 return driver.FindElement(locator);            
         }
-
+        /// <summary>
+        /// To wait and find an element till element is displayed
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <param name="locator"></param>
+        /// <returns></returns>
         public static IWebElement WaitAndFindWhenElementIsDisplayed(IWebDriver driver, By locator)
         {
 
@@ -30,6 +40,12 @@ namespace TFLWebsiteJourneyPlannerFramework
 
         }
 
+        /// <summary>
+        /// To wait and find all the elements till element is clickable
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <param name="locator"></param>
+        /// <returns></returns>
         public static List<IWebElement> WaitAndFindWhenElementsAreClickable(IWebDriver driver, By locator)
         {
 
@@ -37,6 +53,13 @@ namespace TFLWebsiteJourneyPlannerFramework
             webdriverwait.Until(ExpectedConditions.ElementToBeClickable(driver.FindElement(locator)));
             return driver.FindElements(locator).ToList();
         }
+
+        /// <summary>
+        /// To wait and find all the elements till element is displayed
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <param name="locator"></param>
+        /// <returns></returns>
 
         public static List<IWebElement> WaitAndFindWhenElementsIsDisplayed(IWebDriver driver, By locator)
         {
@@ -47,11 +70,20 @@ namespace TFLWebsiteJourneyPlannerFramework
         }
 
 
+        /// <summary>
+        /// For scrolling down the current window
+        /// </summary>
+        /// <param name="driver"></param>
         public static void ScrollDown(IWebDriver driver)
         {
             IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
             jse.ExecuteScript("window.scrollBy(0,250)");
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
         }
+        /// <summary>
+        /// For scrolling up the current window
+        /// </summary>
+        /// <param name="driver"></param>
 
         public static void ScrollUp(IWebDriver driver)
         {

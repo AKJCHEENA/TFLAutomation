@@ -58,8 +58,8 @@ namespace TFLWebsiteJourneyPlannerSteps.Steps
         [When(@"Widget is unable to plan a journey as incorrect locations ""(.*)"",""(.*)"",""(.*)"",""(.*)"" are entered into the widget on TFL site")]
         public void WhenWidgetIsUnableToPlanAJourneyAsIncorrectLocationsAreEnteredIntoTheWidgetOnTFLSite(string fromTextInPlanAJourney, string toTextInPlanAJourney, string editedFromTextInPlanAJourney, string editedToTextInPlanAJourney)
         {
-            _editedFomTextInPlanAJourney = editedFromTextInPlanAJourney == "" ? null : editedFromTextInPlanAJourney;
-            _editedToTextInPlanAJourney = editedToTextInPlanAJourney == "" ? null : editedToTextInPlanAJourney;
+                _editedFomTextInPlanAJourney = editedFromTextInPlanAJourney == "" ? null : editedFromTextInPlanAJourney;
+                _editedToTextInPlanAJourney = editedToTextInPlanAJourney == "" ? null : editedToTextInPlanAJourney;
 
                 ScenarioContext.Current["JourneyDetailsPageHtmlPage"] = ScenarioContext.Current.Get<TFLHtmlPage>("TflHtmlPage").ClickOnPlanAJourneyWhenJourneyDetailsAreCorrect();
                 var actualFromFieldPlanAJourneyMessage = ScenarioContext.Current.Get<JourneyDetailsPage>("JourneyDetailsPageHtmlPage").GetFromMessagePlanAJourney();

@@ -1,10 +1,5 @@
 ﻿using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using TFLWebsiteJourneyPlannerFramework;
 
 namespace TFLWebsiteJourneyPlannerDomain
@@ -26,6 +21,11 @@ namespace TFLWebsiteJourneyPlannerDomain
             
         }
 
+        /// <summary>
+        /// To enter the message in "from" field
+        /// </summary>
+        /// <param name="fromTextInPlanAJourney"></param>
+        /// <returns></returns>
         public TFLHtmlPage EnterFromFieldInPlanAJourney(string fromTextInPlanAJourney)
         {
             int i = 0;
@@ -38,7 +38,11 @@ namespace TFLWebsiteJourneyPlannerDomain
             }
             return this;
         }
-
+        /// <summary>
+        /// To enter the message in "To" field
+        /// </summary>
+        /// <param name="toTextInPlanAJourney"></param>
+        /// <returns></returns>
         public TFLHtmlPage EnterToFieldInPlanAJourney(string toTextInPlanAJourney)
         {
             int i = 0;
@@ -51,6 +55,11 @@ namespace TFLWebsiteJourneyPlannerDomain
             }
             return this;
         }
+        
+        /// <summary>
+        /// To click on plan a journey
+        /// </summary>
+        /// <returns></returns>
 
         public TFLHtmlPage ClickOnPlanAJourney()
         {
@@ -58,37 +67,55 @@ namespace TFLWebsiteJourneyPlannerDomain
             return this;
         }
 
-
+        /// <summary>
+        /// To click on recent tab in plan a journey
+        /// </summary>
+        /// <returns></returns>
         public TFLHtmlPage ClickOnRecentTabInPlanAJourney()
         {
             WaitAndFindingWebElementsMethods.WaitAndFindWhenElementIsClickable(Driver, _recentTabPlanMyJourney).Click();
             return this;
         }
-
+        /// <summary>
+        /// To get the size of recent trips
+        /// </summary>
+        /// <returns></returns>
         public int GetSizeOfTripsOnRecentTabInPlanAJourney()
         {
             return WaitAndFindingWebElementsMethods.WaitAndFindWhenElementsAreClickable(Driver, _sizeOfTripsOnRecentTabPlanMyJourney).Count;
         }
-
+        /// <summary>
+        /// To get the details of the recent trip
+        /// </summary>
         public string GetDetailsOfRecentTripOnRecentTabInPlanAJourney
         {
             get { return WaitAndFindingWebElementsMethods.WaitAndFindWhenElementIsDisplayed(Driver, _getDetailOfRecentTripsOnRecentTabPlanMyJourney).Text.Trim(); }
         }
+
+        /// <summary>
+        /// To click on palan a journey
+        /// </summary>
+        /// <returns></returns>
         public JourneyDetailsPage ClickOnPlanAJourneyWhenJourneyDetailsAreCorrect()
         {
             WaitAndFindingWebElementsMethods.WaitAndFindWhenElementIsClickable(Driver, _planMyJourney).Click();
-            //WaitAndFindingWebElementsMethods.WaitForLoadingIcon(Driver);
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             WaitAndFindingWebElementsMethods.ScrollUp(Driver);
 
             return new JourneyDetailsPage(Driver);
-        }        
+        }
 
+        /// <summary>
+        /// To get the error message from "from" field
+        /// </summary>
         public string GetFromErrorMessagePlanAJourney
         {
             get { return WaitAndFindingWebElementsMethods.WaitAndFindWhenElementIsDisplayed(Driver, _fromPlanAJourneyError).Text.Trim(); }
         }
 
+        /// <summary>
+        /// o get the error message from "To" field
+        /// </summary>
         public string GetToErrorMessagePlanAJourney
         {
             get { return WaitAndFindingWebElementsMethods.WaitAndFindWhenElementIsDisplayed(Driver, _toPlanAJourneyError).Text.Trim(); }
