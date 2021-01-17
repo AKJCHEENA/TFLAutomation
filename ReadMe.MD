@@ -3,8 +3,9 @@ To run the project, below are the instructions -
 2. ChromeDriver.exe should be present in  TFLWebsiteJourneyPlanner\TFLWebsiteJourneyPlannerTest\bin\Debug
 3. Go to test explorer, it should load all the 5 tests present in the feature file TFLWebsiteJourneyPlanner\TFLWebsiteJourneyPlannerTest\FeaturesVerifyAllPossibleScenariosOnTFLHomePage.feature
 4. To run any test out of these , right click and run.
-5. Before executing any scenario , [BeforeScenario] will run which is present in TFLWebsiteJourneyPlanner\TFLWebsiteJourneyPlannerFramework\Hooks.cs
-6. After executing any scenario, [AfterScenario] will run which is present in TFLWebsiteJourneyPlanner\TFLWebsiteJourneyPlannerFramework\Hooks.cs. It will also handle the exceptions if any are present.
+5.If you face any issues while running the test, please re-install NUnit3TestAdapter(Latest version) package.
+6. Before executing any scenario , [BeforeScenario] will run which is present in TFLWebsiteJourneyPlanner\TFLWebsiteJourneyPlannerFramework\Hooks.cs
+7. After executing any scenario, [AfterScenario] will run which is present in TFLWebsiteJourneyPlanner\TFLWebsiteJourneyPlannerFramework\Hooks.cs. It will also handle the exceptions if any are present.
 
 
 Project Architecture:
