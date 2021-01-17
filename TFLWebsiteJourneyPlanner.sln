@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFLWebsiteJourneyPlannerSteps", "TFLWebsiteJourneyPlannerSteps\TFLWebsiteJourneyPlannerSteps.csproj", "{45254BD8-5750-47F2-B844-C2F1B2797624}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFLWebsiteJourneyPlannerFramework", "TFLWebsiteJourneyPlannerFramework\TFLWebsiteJourneyPlannerFramework.csproj", "{8BCDE6CB-E1EC-48CE-B44A-B349620B2BC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFLWebsiteJourneyPlannerDomain", "TFLWebsiteJourneyPlannerDomain\TFLWebsiteJourneyPlannerDomain.csproj", "{2DF20B68-E83E-430C-891F-1EEE44874AEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFLWebsiteJourneyPlannerTest", "TFLWebsiteJourneyPlannerTest\TFLWebsiteJourneyPlannerTest.csproj", "{51A1B056-C57A-400E-A9C3-7A3178D51A04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45254BD8-5750-47F2-B844-C2F1B2797624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45254BD8-5750-47F2-B844-C2F1B2797624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45254BD8-5750-47F2-B844-C2F1B2797624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45254BD8-5750-47F2-B844-C2F1B2797624}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BCDE6CB-E1EC-48CE-B44A-B349620B2BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BCDE6CB-E1EC-48CE-B44A-B349620B2BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BCDE6CB-E1EC-48CE-B44A-B349620B2BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BCDE6CB-E1EC-48CE-B44A-B349620B2BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DF20B68-E83E-430C-891F-1EEE44874AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DF20B68-E83E-430C-891F-1EEE44874AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DF20B68-E83E-430C-891F-1EEE44874AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DF20B68-E83E-430C-891F-1EEE44874AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A1B056-C57A-400E-A9C3-7A3178D51A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A1B056-C57A-400E-A9C3-7A3178D51A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A1B056-C57A-400E-A9C3-7A3178D51A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A1B056-C57A-400E-A9C3-7A3178D51A04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F63899C-3C72-4A89-8BA1-69A8519FC8FC}
+	EndGlobalSection
+EndGlobal
